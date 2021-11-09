@@ -487,7 +487,7 @@ ggplot(staff_long,
 
 This is how the previous plot might look like to someone with Deuteranopia (a type of red-green confusion)
 
-```{r out.width="90%"}
+```{r out.width="80%"}
 knitr::include_graphics("images/deuteranopia.png")
 ```
 
@@ -497,7 +497,7 @@ knitr::include_graphics("images/deuteranopia.png")
 
 This is it might look like to someone with Protanopia (also a type of red-green confusion)
 
-```{r out.width="90%"}
+```{r out.width="80%"}
 knitr::include_graphics("images/protanopia.png")
 ```
 
