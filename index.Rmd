@@ -1,5 +1,6 @@
 ---
 title: "visualizing data"
+subtitle: "<br>🔗 [bit.ly/dataviz-ncpma](https://bit.ly/dataviz-ncpma)"
 author: "<br> dr. mine çetinkaya-rundel <br> duke university"
 output:
   xaringan::moon_reader:
