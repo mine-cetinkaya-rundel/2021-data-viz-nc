@@ -483,6 +483,53 @@ ggplot(staff_long,
 
 ---
 
+## Use an accessible color scale
+
+This is how the previous plot might look like to someone with Deuteranopia (a type of red-green confusion)
+
+```{r out.width="90%"}
+knitr::include_graphics("images/deuteranopia.png")
+```
+
+---
+
+## Use an accessible color scale
+
+This is it might look like to someone with Protanopia (also a type of red-green confusion)
+
+```{r out.width="90%"}
+knitr::include_graphics("images/protanopia.png")
+```
+
+---
+
+## Use an accessible color scale
+
+```{r fig.asp = 0.5, fig.with = 12}
+ggplot(staff_long,
+       aes(x = year, 
+           y = percentage, 
+             color = str_wrap(faculty_type, 20), 
+             group = str_wrap(faculty_type, 20))) +
+  geom_line(size = 1) +
+  labs(x = NULL, 
+       y = "Percent of Total Instructional Staff", 
+       color = NULL,
+       title = "Trends in Instructional Staff Employment Status, 1975-2011",
+       subtitle = "All Institutions, National Totals",
+       caption = "Source: US Department of Education, IPEDS Fall Staff Survey"
+       ) +
+  scale_y_continuous(labels = label_percent(accuracy = 1, scale = 1)) +
+  theme(
+    axis.title.y = element_text(size = 12),
+    legend.key.height = unit(1.5, "cm"),
+    plot.caption = element_text(size = 8, hjust = 0)
+  ) +
+  scale_color_OkabeIto()
+```
+
+---
+
 ## Use direct labeling
 
 ```{r fig.asp = 0.5, fig.with = 12}
@@ -510,7 +557,8 @@ staff_long %>%
     plot.caption = element_text(size = 8, hjust = 0),
     plot.margin = margin(0.1, 2.5, 0.1, 0.1, unit = "in")
     ) +
-  coord_cartesian(clip = "off")
+  coord_cartesian(clip = "off") +
+  scale_color_OkabeIto(order = c(3, 2, 1, 5, 4))
 ```
 
 ---
