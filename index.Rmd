@@ -694,6 +694,9 @@ p +
 - Prefer direct labeling over legends
 
 --
+- Use accessible colors
+
+--
 - Use color to draw attention
 
 --
@@ -1144,5 +1147,4 @@ class: middle, inverse
 - Community: [Data Visualization Society](https://www.datavisualizationsociety.org/resources)
 
 - Tools: All visualizations presented have been created with [R](https://cran.r-project.org/) and [ggplot2](https://ggplot2.tidyverse.org/)
-
----
+  - For those who are interested, the source code can be found [here](https://github.com/mine-cetinkaya-rundel/2021-data-viz-nc)
